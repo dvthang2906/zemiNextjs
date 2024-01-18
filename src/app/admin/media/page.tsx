@@ -31,11 +31,6 @@ export default function Home() {
         <div>
 
 
-            <AppTable
-                blogs={data?.sort((a: any, b: any) => b.id - a.id)}
-            />
-
-
 
         </div>
     )
