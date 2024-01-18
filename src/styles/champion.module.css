@@ -1,0 +1,46 @@
+.championGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.championContainer {
+    flex: 0 1 calc(20% - 20px);
+    position: relative;
+    width: 210px;
+    height: 280px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.championImages {
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.championName {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.championContainer:hover .championImages {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+.championContainer:hover .championName {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: violet;
+    opacity: 1;
+}

@@ -1,0 +1,17 @@
+/* components/VideoBackground.module.css */
+
+.videoContainer {
+    text-align: center;
+    overflow: hidden;
+    z-index: -1;
+    /* Đảm bảo video nằm dưới nội dung khác */
+}
+
+.video {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    /* Đảm bảo video bao phủ toàn bộ khu vực */
+    object-position: center;
+    /* Căn chỉnh video */
+}
