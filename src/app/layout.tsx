@@ -29,13 +29,13 @@ export default function RootLayout({
       <Head>
         <link
           rel="icon"
-          href="src\images\logo.png"
+          href="images\logo.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="src\images\logo.png"
+          href="images\logo.png"
         />
       </Head>
       <body className={inter.className}>
