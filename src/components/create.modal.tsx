@@ -23,7 +23,7 @@ function CreateModal(props: IProps) {
     const [content, setContent] = useState<string>("")
 
     const [file, setFile] = useState(null);
-    const [imagePreviewUrl, setImagePreviewUrl] = useState(null);
+    const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
 
 
     const handleSubmit = () => {
@@ -83,11 +83,13 @@ function CreateModal(props: IProps) {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                setImagePreviewUrl(reader.result);
+                setImagePreviewUrl(reader.result as string);
             };
             reader.readAsDataURL(file);
             setFile(file);
             setAuthor(file.name);
+        } else {
+            setImagePreviewUrl(null);
         }
     };
 
